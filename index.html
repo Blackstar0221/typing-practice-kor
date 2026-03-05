@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한글 타자 연습기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>한글 타자 연습기</h1>
+
+    <div class="settings">
+      <label>
+        단어 개수:
+        <select id="wordCountSelect">
+          <option value="10">10개</option>
+          <option value="20">20개</option>
+          <option value="30">30개</option>
+        </select>
+      </label>
+
+      <label>
+        난이도:
+        <select id="difficultySelect">
+          <option value="easy">쉬움</option>
+          <option value="medium">보통</option>
+          <option value="hard">어려움</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="game">
+      <div class="current-word-box">
+        <span id="currentWord">시작 버튼을 눌러 주세요</span>
+      </div>
+
+      <input
+        type="text"
+        id="userInput"
+        placeholder="여기에 단어를 입력하고 Enter를 누르세요"
+        autocomplete="off"
+        disabled
+      />
+
+      <div class="buttons">
+        <button id="startBtn">시작</button>
+        <button id="resetBtn" disabled>리셋</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div>
+        <strong>진행:</strong>
+        <span id="wordsDone">0</span>/<span id="wordsTotal">0</span>
+      </div>
+      <div><strong>정답 수:</strong> <span id="correctCount">0</span></div>
+      <div><strong>오답 수:</strong> <span id="wrongCount">0</span></div>
+      <div><strong>시간:</strong> <span id="timeElapsed">0.0</span> 초</div>
+      <div><strong>정확도:</strong> <span id="accuracy">0</span>%</div>
+      <div><strong>단어당 평균 시간:</strong> <span id="avgTime">0.0</span> 초</div>
+    </div>
+
+    <div class="result-message" id="resultMessage"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
